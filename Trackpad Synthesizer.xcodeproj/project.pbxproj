@@ -13,6 +13,9 @@
 		57EFACF81DF4A79500809E87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57EFACF61DF4A79500809E87 /* Main.storyboard */; };
 		57EFAD031DF4A79500809E87 /* Trackpad_SynthesizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EFAD021DF4A79500809E87 /* Trackpad_SynthesizerTests.swift */; };
 		57EFAD0E1DF4A79500809E87 /* Trackpad_SynthesizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EFAD0D1DF4A79500809E87 /* Trackpad_SynthesizerUITests.swift */; };
+		57EFAD1C1DF4AF9E00809E87 /* TrackpadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EFAD1B1DF4AF9E00809E87 /* TrackpadController.swift */; };
+		57EFAD1E1DF4B7D600809E87 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EFAD1D1DF4B7D600809E87 /* AudioKit.framework */; };
+		57EFAD1F1DF4B7D600809E87 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57EFAD1D1DF4B7D600809E87 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		57EFAD201DF4B7D600809E87 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				57EFAD1F1DF4B7D600809E87 /* AudioKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		57EFACED1DF4A79500809E87 /* Trackpad Synthesizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trackpad Synthesizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EFACF01DF4A79500809E87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +62,8 @@
 		57EFAD091DF4A79500809E87 /* Trackpad SynthesizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trackpad SynthesizerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EFAD0D1DF4A79500809E87 /* Trackpad_SynthesizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trackpad_SynthesizerUITests.swift; sourceTree = "<group>"; };
 		57EFAD0F1DF4A79500809E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57EFAD1B1DF4AF9E00809E87 /* TrackpadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackpadController.swift; sourceTree = "<group>"; };
+		57EFAD1D1DF4B7D600809E87 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "AudioKit-macOS/AudioKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EFAD1E1DF4B7D600809E87 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +95,7 @@
 		57EFACE41DF4A79400809E87 = {
 			isa = PBXGroup;
 			children = (
+				57EFAD1D1DF4B7D600809E87 /* AudioKit.framework */,
 				57EFACEF1DF4A79500809E87 /* Trackpad Synthesizer */,
 				57EFAD011DF4A79500809E87 /* Trackpad SynthesizerTests */,
 				57EFAD0C1DF4A79500809E87 /* Trackpad SynthesizerUITests */,
@@ -97,6 +118,7 @@
 			children = (
 				57EFACF01DF4A79500809E87 /* AppDelegate.swift */,
 				57EFACF21DF4A79500809E87 /* ViewController.swift */,
+				57EFAD1B1DF4AF9E00809E87 /* TrackpadController.swift */,
 				57EFACF41DF4A79500809E87 /* Assets.xcassets */,
 				57EFACF61DF4A79500809E87 /* Main.storyboard */,
 				57EFACF91DF4A79500809E87 /* Info.plist */,
@@ -132,6 +154,7 @@
 				57EFACE91DF4A79400809E87 /* Sources */,
 				57EFACEA1DF4A79400809E87 /* Frameworks */,
 				57EFACEB1DF4A79400809E87 /* Resources */,
+				57EFAD201DF4B7D600809E87 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,6 +280,7 @@
 			files = (
 				57EFACF31DF4A79500809E87 /* ViewController.swift in Sources */,
 				57EFACF11DF4A79500809E87 /* AppDelegate.swift in Sources */,
+				57EFAD1C1DF4AF9E00809E87 /* TrackpadController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +422,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AudioKit-macOS",
+				);
 				INFOPLIST_FILE = "Trackpad Synthesizer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Victory-Labs.Trackpad-Synthesizer";
@@ -411,6 +439,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AudioKit-macOS",
+				);
 				INFOPLIST_FILE = "Trackpad Synthesizer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Victory-Labs.Trackpad-Synthesizer";
