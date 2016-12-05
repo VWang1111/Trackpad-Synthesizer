@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="RCd-I1-tch">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
@@ -660,77 +660,77 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller-->
-        <scene sceneID="R2V-B0-nI4">
+        <!--Tab View Controller-->
+        <scene sceneID="RLZ-IO-Hxq">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                    </window>
+                <tabViewController selectedTabViewItemIndex="0" id="RCd-I1-tch" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="UyW-Ty-f3r"/>
+                        <tabViewItem identifier="" id="lEW-gx-IPg"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="fwd-qr-JyJ">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="qBN-6a-iiQ" kind="relationship" relationship="tabItems" id="3Wm-4b-6o9"/>
+                        <segue destination="99M-eu-7SN" kind="relationship" relationship="tabItems" id="wfT-wX-hi9"/>
                     </connections>
-                </windowController>
-                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                </tabViewController>
+                <customObject id="YK3-mH-1gF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-699" y="757"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--Single-->
+        <scene sceneID="Xm8-aP-Hgi">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Trackpad_Synthesizer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl" customClass="TrackpadController">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <viewController title="Single" id="qBN-6a-iiQ" customClass="SingleViewController" customModule="Trackpad_Synthesizer" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="474" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOY-cU-BVh">
-                                <rect key="frame" x="29" y="160" width="102" height="32"/>
+                                <rect key="frame" x="29" y="190" width="102" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Amplitude" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pEg-up-y6y">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES" accelerator="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="acceleratorChanged:" target="XfG-lQ-9wD" id="niF-H4-e23"/>
+                                    <action selector="acceleratorChanged:" target="qBN-6a-iiQ" id="j8g-yo-mkz"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJq-oF-uFO">
-                                <rect key="frame" x="188" y="160" width="104" height="32"/>
+                                <rect key="frame" x="171" y="190" width="104" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Frequency" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Em-Jx-09c">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES" accelerator="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="acceleratorChanged:" target="XfG-lQ-9wD" id="c6h-OD-iHI"/>
+                                    <action selector="acceleratorChanged:" target="qBN-6a-iiQ" id="5Wb-4x-Xtd"/>
                                 </connections>
                             </button>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iMo-Kh-nve">
-                                <rect key="frame" x="32" y="141" width="96" height="16"/>
+                                <rect key="frame" x="32" y="171" width="96" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <levelIndicatorCell key="cell" alignment="left" maxValue="1000" warningValue="10000" criticalValue="10000" levelIndicatorStyle="continuousCapacity" id="Esu-be-Qn2"/>
                             </levelIndicator>
-                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="skC-Nz-mNt">
-                                <rect key="frame" x="358" y="140" width="96" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="7" warningValue="10000" criticalValue="10000" id="Sj2-ys-6UK"/>
-                            </levelIndicator>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g1R-1i-Ala">
-                                <rect key="frame" x="353" y="160" width="106" height="32"/>
+                                <rect key="frame" x="321" y="190" width="106" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Harmonics" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ULc-GA-u1h">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES" accelerator="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="acceleratorChanged:" target="XfG-lQ-9wD" id="0G6-IJ-fGb"/>
+                                    <action selector="acceleratorChanged:" target="qBN-6a-iiQ" id="Eje-Kv-bxI"/>
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ovk-l7-uHC">
-                                <rect key="frame" x="209" y="142" width="62" height="17"/>
+                                <rect key="frame" x="192" y="172" width="62" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0" id="RLn-Vh-SYJ">
                                     <font key="font" metaFont="system"/>
@@ -739,7 +739,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VAv-i5-Xgm">
-                                <rect key="frame" x="32" y="201" width="424" height="49"/>
+                                <rect key="frame" x="32" y="231" width="424" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="LGB-gj-fTH">
                                     <font key="font" metaFont="system"/>
@@ -748,19 +748,48 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="skC-Nz-mNt">
+                                <rect key="frame" x="325" y="171" width="96" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="7" warningValue="10000" criticalValue="10000" id="Sj2-ys-6UK"/>
+                            </levelIndicator>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="acceleratorChanged" destination="ZOY-cU-BVh" id="9zf-mw-aen"/>
-                        <outlet property="frequencyDisplay" destination="Ovk-l7-uHC" id="3QP-z5-RbI"/>
-                        <outlet property="harmonicIndicator" destination="skC-Nz-mNt" id="L7U-8m-sKQ"/>
-                        <outlet property="pressureIndicator" destination="iMo-Kh-nve" id="SWj-gB-4UQ"/>
-                        <outlet property="trackpadControllerView" destination="m2S-Jp-Qdl" id="x8W-tA-h2x"/>
+                        <outlet property="frequencyDisplay" destination="Ovk-l7-uHC" id="OG9-3L-nWV"/>
+                        <outlet property="harmonicIndicator" destination="skC-Nz-mNt" id="vzz-nT-CfU"/>
+                        <outlet property="pressureIndicator" destination="iMo-Kh-nve" id="eCf-SB-GSS"/>
                     </connections>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="YWd-Bw-Srr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-84" y="747"/>
+        </scene>
+        <!--Keyboard-->
+        <scene sceneID="H1i-yf-6EN">
+            <objects>
+                <viewController title="Keyboard" id="99M-eu-7SN" customClass="KeyboardViewController" customModule="Trackpad_Synthesizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <customView key="view" id="UKc-GD-idU">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKe-Gr-awn">
+                                <rect key="frame" x="14" y="258" width="402" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Pressure" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="euH-Us-7eI">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" accelerator="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="acceleratorChanged:" target="qBN-6a-iiQ" id="2iW-JK-Xnh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </customView>
+                </viewController>
+                <customObject id="t4b-7x-VFn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="1207"/>
         </scene>
     </scenes>
 </document>

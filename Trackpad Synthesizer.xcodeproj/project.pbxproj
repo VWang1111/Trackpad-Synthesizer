@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		57EFACF11DF4A79500809E87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EFACF01DF4A79500809E87 /* AppDelegate.swift */; };
-		57EFACF31DF4A79500809E87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EFACF21DF4A79500809E87 /* ViewController.swift */; };
+		57EFACF31DF4A79500809E87 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EFACF21DF4A79500809E87 /* SingleViewController.swift */; };
 		57EFACF51DF4A79500809E87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57EFACF41DF4A79500809E87 /* Assets.xcassets */; };
 		57EFACF81DF4A79500809E87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57EFACF61DF4A79500809E87 /* Main.storyboard */; };
 		57EFAD031DF4A79500809E87 /* Trackpad_SynthesizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EFAD021DF4A79500809E87 /* Trackpad_SynthesizerTests.swift */; };
 		57EFAD0E1DF4A79500809E87 /* Trackpad_SynthesizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EFAD0D1DF4A79500809E87 /* Trackpad_SynthesizerUITests.swift */; };
-		57EFAD1C1DF4AF9E00809E87 /* TrackpadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EFAD1B1DF4AF9E00809E87 /* TrackpadController.swift */; };
+		57EFAD1C1DF4AF9E00809E87 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EFAD1B1DF4AF9E00809E87 /* KeyboardViewController.swift */; };
 		57EFAD1E1DF4B7D600809E87 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EFAD1D1DF4B7D600809E87 /* AudioKit.framework */; };
 		57EFAD1F1DF4B7D600809E87 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57EFAD1D1DF4B7D600809E87 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -52,7 +52,7 @@
 /* Begin PBXFileReference section */
 		57EFACED1DF4A79500809E87 /* Trackpad Synthesizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trackpad Synthesizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EFACF01DF4A79500809E87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57EFACF21DF4A79500809E87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57EFACF21DF4A79500809E87 /* SingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
 		57EFACF41DF4A79500809E87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57EFACF71DF4A79500809E87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57EFACF91DF4A79500809E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		57EFAD091DF4A79500809E87 /* Trackpad SynthesizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trackpad SynthesizerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EFAD0D1DF4A79500809E87 /* Trackpad_SynthesizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trackpad_SynthesizerUITests.swift; sourceTree = "<group>"; };
 		57EFAD0F1DF4A79500809E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57EFAD1B1DF4AF9E00809E87 /* TrackpadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackpadController.swift; sourceTree = "<group>"; };
+		57EFAD1B1DF4AF9E00809E87 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		57EFAD1D1DF4B7D600809E87 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "AudioKit-macOS/AudioKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,8 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				57EFACF01DF4A79500809E87 /* AppDelegate.swift */,
-				57EFACF21DF4A79500809E87 /* ViewController.swift */,
-				57EFAD1B1DF4AF9E00809E87 /* TrackpadController.swift */,
+				57EFACF21DF4A79500809E87 /* SingleViewController.swift */,
+				57EFAD1B1DF4AF9E00809E87 /* KeyboardViewController.swift */,
 				57EFACF41DF4A79500809E87 /* Assets.xcassets */,
 				57EFACF61DF4A79500809E87 /* Main.storyboard */,
 				57EFACF91DF4A79500809E87 /* Info.plist */,
@@ -278,9 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57EFACF31DF4A79500809E87 /* ViewController.swift in Sources */,
+				57EFACF31DF4A79500809E87 /* SingleViewController.swift in Sources */,
 				57EFACF11DF4A79500809E87 /* AppDelegate.swift in Sources */,
-				57EFAD1C1DF4AF9E00809E87 /* TrackpadController.swift in Sources */,
+				57EFAD1C1DF4AF9E00809E87 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
