@@ -12,8 +12,12 @@ import AudioKit
 class KeyboardViewController: NSViewController, AKKeyboardDelegate {
     
     let bank = AKOscillatorBank()
+    var nextVelocity = 0.0
+    @IBOutlet weak var velocityIndicator: NSLevelIndicator!
+    @IBOutlet weak var velocityTextField: NSTextField!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         AudioKit.stop()
         
@@ -29,7 +33,7 @@ class KeyboardViewController: NSViewController, AKKeyboardDelegate {
     
     func noteOn(note: MIDINoteNumber) {
         print("start "+String(note))
-        bank.play(noteNumber: note, velocity: 80)
+        bank.play(noteNumber: note, velocity: Int(nextVelocity))
         AudioKit.start()
     }
     
@@ -39,5 +43,12 @@ class KeyboardViewController: NSViewController, AKKeyboardDelegate {
         AudioKit.start()
     }
     
+    @IBAction func acceleratorChanged(_ sender: NSButton) {
+        if sender.doubleValue >= 1 {
+            nextVelocity = (sender.doubleValue - 1.0) * 100.0
+            velocityIndicator.integerValue = Int(nextVelocity)
+            velocityTextField.stringValue = String(Int(nextVelocity))
+        }
+    }
 }
 

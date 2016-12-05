@@ -19,6 +19,7 @@ class SingleViewController: NSViewController {
     var mixer = AKMixer()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         AudioKit.stop()
         
